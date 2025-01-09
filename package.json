@@ -1,0 +1,17 @@
+{
+  "name": "chakra-ui-local-compositions",
+  "version": "0.0.1",
+  "description": "Fetch Chakra UI compositions JSON files",
+  "type": "module",
+  "main": "fetch-compositions.js",
+  "scripts": {
+    "start": "node fetch-compositions.js",
+    "serve": "serve"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "https-proxy-agent": "^7.0.2",
+    "node-fetch": "^3.3.2"
+  }
+}
