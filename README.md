@@ -78,7 +78,14 @@ FetchError: request to https://chakra-v3-docs.vercel.app/compositions/index.json
 └  Done!
 ```
 
-_注意：第 4 步中的 `REGISTRY_URL` 需要与第 3 步的保持兼容_
+_注意：第 4 步中的 `REGISTRY_URL` 需要与第 3 步的保持兼容_，如果端口被占用，可以酌情修改：
+
+```json
+  "scripts": {
+    "serve": "serve",
+    "serve:8081": "serve -p 8081"
+  },
+```
 
 具体可以参考示例： [chakra-ui-snippet-sample](./chakra-ui-snippet-sample)
 

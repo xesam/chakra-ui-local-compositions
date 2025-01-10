@@ -6,7 +6,8 @@
   "main": "fetch-compositions.js",
   "scripts": {
     "start": "node fetch-compositions.js",
-    "serve": "serve"
+    "serve": "serve",
+    "serve:8081": "serve -p 8081"
   },
   "dependencies": {},
   "devDependencies": {
