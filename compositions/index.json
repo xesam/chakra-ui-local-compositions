@@ -21,16 +21,6 @@
   },
   {
     "type": "composition",
-    "id": "alert",
-    "file": "alert.tsx",
-    "component": "Alert",
-    "npmDependencies": [],
-    "fileDependencies": [
-      "compositions/ui/close-button"
-    ]
-  },
-  {
-    "type": "composition",
     "id": "avatar",
     "file": "avatar.tsx",
     "component": "Avatar",
@@ -50,14 +40,6 @@
     "id": "breadcrumb",
     "file": "breadcrumb.tsx",
     "component": "Breadcrumb",
-    "npmDependencies": [],
-    "fileDependencies": []
-  },
-  {
-    "type": "composition",
-    "id": "button",
-    "file": "button.tsx",
-    "component": "Button",
     "npmDependencies": [],
     "fileDependencies": []
   },
@@ -301,6 +283,14 @@
     "fileDependencies": [
       "compositions/ui/color-mode"
     ]
+  },
+  {
+    "type": "composition",
+    "id": "qr-code",
+    "file": "qr-code.tsx",
+    "component": "QrCode",
+    "npmDependencies": [],
+    "fileDependencies": []
   },
   {
     "type": "composition",

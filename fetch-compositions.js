@@ -55,7 +55,7 @@ async function main() {
         if (detailJson) {
             await saveJson(`${item.id}.json`, detailJson);
             // 添加小延迟以避免请求过快
-            await new Promise(resolve => setTimeout(resolve, 500));
+            await new Promise(resolve => setTimeout(resolve, 5000));
         }
     }
 
