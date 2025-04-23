@@ -6,7 +6,7 @@
 npx @chakra-ui/cli snippet add
 ```
 
-的方式，这个命令会读取远程的组件配置文件，然后根据配置文件生成组件代码。比如：
+的方式，这个命令会读取远程的组件配置文件，然后根据配置文件生成组件代码。比如如果执行以下命令：
 
 ```
 npx @chakra-ui/cli snippet add button
@@ -22,7 +22,7 @@ _这种方案还是挺糟心的，特别是远程配置与本地代码版本有�
 FetchError: request to https://chakra-v3-docs.vercel.app/compositions/index.json failed, reason: connect ETIMEDOUT
 ```
 
-这里提供一个替代方案，既然部署在 `vercel` 上的配置无法访问，那就把配置文件下载下来，然后本地使用，思路：
+这里提供一个替代方案，既然部署在 `vercel` 上的配置无法访问，那就把这些配置文件下载下来，然后直接使用本地的这些配置文件，思路：
 
 1. 挂个代理，把配置文件下载下来，放置在本地；
 2. 基于本地文件，开启一个静态文件服务器；
@@ -33,7 +33,7 @@ FetchError: request to https://chakra-v3-docs.vercel.app/compositions/index.json
 1. 下载本工程，其中 `compositions` 目录就是所有组件的配置文件；
 2. `npm install` 安装依赖；
 3. `npm run serve` 启动静态文件服务器，默认 `3000` 端口，如果有端口冲突，可以修改 [package.json](./package.json) 中的 `serve:8081` 命令；
-4. 在目标工程的 `package.json` 文件中，增加：
+4. 在目标工程[示例工程 chakra-ui-snippet-sample](./chakra-ui-snippet-sample)的 `package.json` 文件中，增加：
 
 ```json
   "scripts": {
@@ -42,13 +42,13 @@ FetchError: request to https://chakra-v3-docs.vercel.app/compositions/index.json
   },
 ```
 
-5. 执行 `npm run snippet add button`，即可下载 `Button` 组件配置文件，并生成 `Button` 组件代码：
+5. 执行 `npm run snippet add toaster`，即可下载 `Toaster` 组件配置文件，并生成 `Toaster` 组件代码：
 
 ```
-λ npm run snippet add button
+λ npm run snippet add toaster
 
 > chakra-ui-empty@0.0.1 snippet
-> cross-env REGISTRY_URL=http://localhost:3000 npx @chakra-ui/cli snippet add button
+> cross-env REGISTRY_URL=http://localhost:3000 npx @chakra-ui/cli snippet add toaster
 
 ┌  Chakra CLI ⚡️
 │
@@ -93,5 +93,6 @@ _注意：第 4 步中的 `REGISTRY_URL` 需要与第 3 步的保持兼容_，�
 
 ## compositions 配置文件更新记录
 
+- 2025-04-23，v3.16.1
 - 2025-02-12
 - 2025-01-02
